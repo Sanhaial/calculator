@@ -48,8 +48,10 @@ public  static ArrayList<String> operend(String str) throws MyException {
 		str1 = str1 + s;
 		i++;
 	}
-	//System.out.println("Строка 1 " + str1);
-	//System.out.println("Строка 2 " + str2);
+	System.out.println("Строка 1 Длинна" + str1.length());
+	System.out.println("Строка 2 Длинна" + str2.length());
+	if(str1.length() == 0) throw new MyException();
+	if(str2.length() == 0) throw new MyException();
 	str1 = remove_the_space(str1);
 	str2 = remove_the_space(str2);
 	HashMap<String, String> anc_numerals1 = arabic_numerals_converter(str1);
@@ -80,8 +82,8 @@ public static HashMap<String, String> arabic_numerals_converter(String str) {
 	anc_result.put("type_numerals", "arabic");
 	char[] mass_c = str.toCharArray();
 	int length = mass_c.length;
-	//System.out.println("В методе arabic_numerals_onverter ");
-	//System.out.println("Длинна строки " + length);
+	System.out.println("В методе arabic_numerals_onverter ");
+	System.out.println("Длинна строки " + length);
 	Integer result = roman_numerals(mass_c[length-1]);
 	if (result == null) {
 		return anc_result;
