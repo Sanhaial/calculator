@@ -173,7 +173,7 @@ public static String roman_numerals(Integer num) {
 		str_res = str_res + "N";
 	}//
 	do {
-		//System.out.println("Переводим в римский формат  " + num + " Строковое значение " + str_res);
+		System.out.println("Переводим в римский формат  " + num + " Строковое значение " + str_res);
 		if(num >= 100) {
 			num = num - 100;
 			str_res = str_res + "C";
@@ -182,6 +182,11 @@ public static String roman_numerals(Integer num) {
 		if(num >= 50) {
 			num = num - 50;
 			str_res = str_res + "L";
+			continue;
+		}//
+		if(num >= 40) {
+			num = num - 40;
+			str_res = str_res + "XL";
 			continue;
 		}//
 		if(num >= 10) {
