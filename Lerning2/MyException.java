@@ -4,6 +4,6 @@ public class MyException extends Exception{
 
 	
 public String toString() {
-	return "Ошибка ввода";
+	return "Ошибка ввода111";
 }
 }
